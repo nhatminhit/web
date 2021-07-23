@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table {
+            background-color: #AED8E6;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="form">
+    <table cellspacing="0" border="1">
+        <tr>
+            <td colspan="2">Danh sach</td>
+        </tr>
+        <tr>
+            <td>Nhập N:</td>
+            <td>
+                <input type="text" id="str">
+            </td>
+        </tr>
+        <tr>
+            <td>In</td>
+            <td>
+                <input type="text" id="kq">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Đếm" onclick="tinh()">
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        function tinh() {
+    var s = document.getElementById("str").value;
+    var s1 = s.trim();
+    var t = 0;
+    if (s1.length > 0) {t++}
+    for (var i = 0; i<s1.length-1; i++) {
+        if (s1[i] == " " && s1[i+1] != " ")
+        {
+            t++;
+        }
+    }
+    document.getElementById("kq").value = t;
+}
+    </script>
+</body>
+</html>

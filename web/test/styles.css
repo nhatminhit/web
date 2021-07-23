@@ -1,0 +1,95 @@
+#header{
+    height: 100px;
+    width: 100%;
+}
+#menu{
+    height: 500px;
+    width: 30%;
+    float: left;
+}
+#main{
+    height: 500px;
+    width: 70%;
+    float: left;
+}
+#lap-top-cu{
+    margin-top: 30px;
+    margin-left: -175px;
+    background-color:#00A69B;
+    padding: 20px;
+}
+.text-header{
+    font-weight: 600;
+}
+#select-box{
+    float: right;
+}
+.menu {
+float: left;
+max-width: 230px;
+margin: 0;
+padding: 1em;
+}
+
+#menu ul {
+  margin-top: 15px;
+  background: #FFCCCC;
+  width: 230px;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+#menu li {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 1em;
+}
+#menu li a {
+  text-decoration: none;
+  color: rgb(22, 21, 21);
+  font-weight: bold;
+  display: block;
+}
+#menu li:hover {
+  background: #66FFCC;
+}
+
+/*==Dropdown Menu==*/
+#menu ul li {
+  position: relative;
+}
+#menu .sub-menu {
+  position: absolute;
+  left: 230px;
+  top: 0;
+  display: none;
+}
+#menu li:hover .sub-menu {
+  display: block;
+}
+/*==ListContent==*/
+
+#list-product ul li{
+  width: 22%;
+  float: left;
+  padding: 10px;
+  list-style: none;
+  border: 1px solid rgb(212, 210, 210);
+}
+.title{
+  font-size: 16px;
+  color: #330066;
+  margin:5px;
+}
+.price{
+  color:red;
+  font-weight: 600;
+}
+#list-product ul li:hover img{
+  -webkit-transform: scale(1.2); transform: scale(1.2);
+}
+.title:hover{
+  color: #00A69B;
+}

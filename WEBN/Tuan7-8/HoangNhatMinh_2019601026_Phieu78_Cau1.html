@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table {
+            background-color: #AED8E6;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0" border="1">
+        <tr>
+            <td colspan="2">TÍNH GIÁ TRỊ CỦA MẢNG</td>
+        </tr>
+        <tr>
+            <td>Nhập mảng:</td>
+            <td>
+                <input type="text" id="nhapmang">
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng các phần tử:</td>
+            <td>
+                <input type="text" id="tongcacphantu">
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng các phần tử có chỉ số chẵn:</td>
+            <td>
+                <input type="text" id="tongchisochan">
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng các phần tử chỉ số lẻ:</td>
+            <td>
+                <input type="text" id="tongchisole">
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng các phần tử có giá trị âm:</td>
+            <td>
+                <input type="text" id="tonggiatriam">
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng các phần tử có giá trị dương:</td>
+            <td>
+                <input type="text" id="tonggiatriduong">
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng các phần tử có giá trị chia hết cho 3:</td>
+            <td>
+                <input type="text" id="tonggiatrichiahetcho3">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Xoá" onclick="reset()">
+                <input type="button" value="Tính" onclick="tinh()">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function tinh() {
+            var x = document.getElementById("nhapmang").value;
+            var a = x.split(",");
+            var tongcacphantu = 0;
+            var tongchisochan = 0;
+            var tonggiatriam = 0;
+            var tonggiatriduong = 0;
+            var tonggiatrichiahetcho3 = 0;
+            for (i = 0; i < a.length; i++) {
+                tongcacphantu += parseInt(a[i]);
+            }
+            document.getElementById("tongcacphantu").value = tongcacphantu;
+            for (i = 0; i < a.length; i++) {
+                if (i % 2 == 0) {
+                    tongchisochan += parseInt(a[i]);
+                }
+            }
+            document.getElementById("tongchisochan").value = tongchisochan;
+            document.getElementById("tongchisole").value = tongcacphantu - tongchisochan;
+            for (i = 0; i < a.length; i++) {
+                if (a[i] < 0) {
+                    tonggiatriam += parseInt(a[i]);
+                }
+            }
+            document.getElementById("tonggiatriam").value = tonggiatriam;
+            for (i = 0; i < a.length; i++) {
+                if (a[i] > 0) {
+                    tonggiatriduong += parseInt(a[i]);
+                }
+            }
+            document.getElementById("tonggiatriduong").value = tonggiatriduong;
+            for (i = 0; i < a.length; i++) {
+                if (a[i] % 3 == 0) {
+                    tonggiatrichiahetcho3 += parseInt(a[i]);
+                }
+            }
+            document.getElementById("tonggiatrichiahetcho3").value = tonggiatrichiahetcho3;
+        }
+
+        function reset() {
+            document.getElementById("nhapmang").value = "";
+            document.getElementById("tongcacphantu").value = "";
+            document.getElementById("tongchisochan").value = "";
+            document.getElementById("tongchisole").value = "";
+            document.getElementById("tonggiatriam").value = "";
+            document.getElementById("tonggiatriduong").value = "";
+            document.getElementById("tonggiatrichiahetcho3").value = "";
+        }
+    </script>
+</body>
+
+</html>

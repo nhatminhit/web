@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script language="javascript">
+		function tinhtien(){
+			var First_Level = 15000;
+			var Second_Level = 12000;
+			var Third_Level = 90000;
+			var Fourth_Level = 0.88;
+			var numberKm =
+				parseFloat(window.document.nhap.km.value);
+			var amount=0;
+			if(numberKm<=1){
+				amount=numberKm *First_Level;
+			}
+			else if(numberKm<=5){
+				amount=1*First_Level+(numberKm-1)*Second_Level;
+			}
+			else if(numberKm<=140){
+				amount=1*First_Level+4*Second_Level+(numberKm-5)*Third_Level;
+			}
+			else{
+				amount=(1*First_Level+4*Second_Level+(numberKm-5)*Third_Level)*Fourth_Level;
+			}
+			window.document.nhap.kq.value=amount;
+		}
+	</script>
+</head>
+
+<body>
+	<form name="nhap">
+	<p align=center>
+		<br>
+		<br>
+		<br>
+		<table bgcolor="lightblue"width=250 height=100 border=2>
+			<tr>
+				<th colspan=2>Chương trình tính  tiền taxi</th>
+				<tr>
+			<td colspan=1 align=center>Số km đã đi được:
+				</td>
+					<td>
+					<td colspan=1 align=center><input type="text"name="km"maxlength=4 size=10>
+					</td>
+			</tr>
+			<tr>
+				<td colspan=1 align=center>Tiền thanh toán:</td>
+				<td colspan=1 align=center><input type="text"name="kq"size=10></td>
+			</tr>
+			<tr>
+			<td colspan=2 align=center><input type="reset"value="xóa">
+				<input type="button"value="Tính tiền"onClick="tinhtien();"
+					   </td>
+			</tr>
+	</form>
+</body>
+</html>

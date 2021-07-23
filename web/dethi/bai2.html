@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Tên sách :</td>
+                <td><input type="text" name="book" id="book" value=""></td>
+            </tr>
+            <tr>
+                <td>Tác giả :</td>
+                <td><input type="text" name="author" id="author" value=""><br></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ :</td>
+                <td><input type="text" name="address" id="address" value=""></td>
+            </tr>
+            <tr>
+                <td>Mô tả :</td>
+                <td><textarea name="discription" id="discription" cols="30" rows="10" value=""></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Gui Di" onclick="Solve()">
+                <input type="reset" value="Huy Bo"></td>
+            </tr>
+    </table>
+    </form>
+    <script>
+        function Solve() {
+            var book = document.getElementById('book').value
+            var author = document.getElementById('author').value
+            var address = document.getElementById('address').value
+            var discription = document.getElementById('discription').value
+
+            if(book.length == 0 || author.length == 0 || address.length == 0 || discription.length == 0) {
+                alert("Khong duoc de trong")
+                return
+            }
+
+            var test1 = address.substr(0, 4)
+            var test2 = address.substr(0, 5)
+
+            if(test1 != 'http' && test2 != 'https')
+            {
+                alert("Du lieu vao sai")
+                return
+            }
+
+            var chisocuoi = address.length - 1
+
+            if(address[chisocuoi] == '-')
+            {
+                alert("Du lieu vao sai")
+                return
+            }
+
+            for(var i = 0 ; i <= chisocuoi ; i++)
+            {
+                if(address[i] == ' ')
+                {
+                    alert("Du lieu vao sai")
+                    return
+                }
+            }
+
+            alert('Dang Ky Thanh Cong')
+        }
+    </script>
+</body>
+</html>

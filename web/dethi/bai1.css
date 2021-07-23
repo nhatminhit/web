@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#tk{
+    font-size: 20px;
+    background-color: aqua;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.menu{
+    background-color: green;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.content a:hover{
+    background-color: green;
+}
+.dropdown:hover .content{
+    display: block;
+}

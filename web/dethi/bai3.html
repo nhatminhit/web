@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bai 3</title>
+        <meta charset="utf-8">
+    </head>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="2">NẠP THẺ ĐIỆN THOẠI</td>
+            </tr>
+            <tr>
+                <td>Số tiền cần nạp :</td>
+                <td><input type="text" name="a" id="a" value=""><br></td>
+            </tr>
+            <tr>
+                <td>Mệnh giá thẻ nạp :</td>
+                <td><input type="text" name="b" id="b" value=""></td>
+            </tr>
+            <tr>
+                <td>Nhập mã thẻ :</td>
+                <td><input type="text" name="c" id="c" value=""></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Nap Thẻ" onclick="check()">
+                <input type="reset" value="Huy Bo"></td>
+            </tr>
+    </table>
+    </form>
+    <script>
+        function check() {
+            var a = document.getElementById('a').value
+            var b = document.getElementById('b').value
+            var c = document.getElementById('c').value
+
+            if(a.length == 0 || b.length == 0 || c.length == 0 ) {
+                alert("Khong duoc de trong")
+                return
+            }
+            if(c.length !=25 ) {
+                alert("Nhap lai")
+                return
+            }
+
+            var x = c.substr(0, 6)
+
+            if(x != "*100* ")
+            {
+                alert("Du lieu vao sai")
+                return
+            }
+
+
+            if(c[10]!="-"||c[15]!="-"||c[20]!="-")
+            {
+                alert("Du lieu vao sai")
+                return
+            }
+
+
+            alert('Dang Ky Thanh Cong')
+        }
+    </script>
+</html>

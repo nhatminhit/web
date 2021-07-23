@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bai1 Phieu 2</title>
+    </head>
+<body>
+<p id="noidung">Enter your mail address <input type="text" id="mail"/><input type="button" value="Add More" id="btn-view" onClick="myFunction();"/></p>
+<script>
+function myFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+
+  document.body.appendChild(x);
+  var y = document.createElement("INPUT");
+  y.setAttribute("type", "button");
+  y.setAttribute("value", "Remove");
+  y.setAttribute("onClick", "y.remove()");
+  document.body.appendChild(y);
+  
+}
+
+</script>
+
+</body>
+</html>

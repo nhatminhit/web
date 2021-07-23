@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Bài 5</title>
+    <script language="JavaScript">
+    function tinhtien(){
+    var x,y,tong;
+    x= (document.getElementById("1").value);
+    y= (document.getElementById("2").value);
+    if(x>=10 && y<=17){
+			tong = (y-x)*20000;
+		}
+		else if(x>=17 && y<=24)
+		{
+			tong = (y-x)*45000;
+		}
+		else
+		{
+			tong=0;
+		}
+		document.getElementById("kq").value = tong;
+    }
+    </script>
+    </head>
+    <body>
+    <form method="post">
+    <br>Nhập Giờ Vào:
+    <input type="text" id="1"  value="">
+    <br>Nhập Giờ Ra:
+    <input type="text" id="2" value="">
+    <br>Thành Tiền:
+    <input type="text" id="kq" value="">
+    <input type="button" value="Giải" onClick="tinhtien();">
+    </form>
+    </body>
+    </html>

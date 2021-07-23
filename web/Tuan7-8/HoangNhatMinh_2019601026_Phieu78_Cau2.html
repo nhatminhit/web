@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table {
+            background-color: #AED8E6;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="form">
+    <table cellspacing="0" border="1">
+        <tr>
+            <td colspan="2">TÍNH GIÁ TRỊ CỦA MẢNG</td>
+        </tr>
+        <tr>
+            <td>Nhập mảng:</td>
+            <td>
+                <input type="text" name="nhapmang">
+            </td>
+        </tr>
+        <tr>
+            <td>Hiển thị các phần tử ngược lại</td>
+            <td>
+                <input type="text" name="innguoc">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Xoá" onclick="reset()">
+                <input type="button" value="Tính" onclick="tinh()">
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        function tinh() {
+            var newStr = window.document.form.nhapmang.value;
+            var newArr = newStr.split(",");
+            newArr.reverse();
+            var newReversedStr = newArr.toString();
+            window.document.form.innguoc.value = newReversedStr;
+        }
+
+        function reset() {
+            document.getElementById("nhapmang").value = "";
+            document.getElementById("innguoc").value = "";
+        }
+    </script>
+</body>
+
+</html>

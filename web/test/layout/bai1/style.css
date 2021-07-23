@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+.root {
+    width: 100%;
+    margin: 0 auto;
+}
+.row{
+    float: left;
+    width: 100%;
+}
+.mb{
+    margin-bottom: 30px;
+}
+.mr{
+    margin-right: 5px;
+}
+.header{
+    background-color: aquamarine;
+    border: 1px #090 solid;
+    font-size: 1vw ;
+    color:blue;
+    border-radius: 8px;
+}
+.header h1{
+    margin: 10px 20px;
+}
+.menu{
+    background-color: black;
+    color: #CCC;
+    border-radius: 5px;
+}
+.footer{
+    background-color: aquamarine;
+    border: 1px #090 solid;
+    font-size: 13px ;
+    color:blue;
+    border-radius: 8px;
+    padding: 20px;
+}
+.trai{
+    float:left;
+    width: 74%;
+}
+.phai{
+    float: left;
+    width: 24%;
+}

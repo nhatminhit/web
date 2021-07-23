@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cau 1</title>
+        <meta charset="utf-8">
+        <style>
+            .nav{
+    height: 50px;
+    width: max-content;
+    background-color: rgb(33, 172, 214);
+    display: flex;
+    line-height: 50px;
+    position: relative;
+}
+.option{
+    color:black;
+    width: 150px;
+    text-align:center ;
+    border-right:0.1px solid #facfcf ;
+}
+.option:hover{
+    background-color:rgb(33, 172, 214);
+    color:red;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.option > .more{
+    display: none;
+    position: absolute;
+}
+.option:hover .more{
+    display: block;
+    width: max-content;
+    background-color:rgb(33, 172, 214);
+}
+.option-more{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right:0.1px solid #facfcf;
+    border-top: 0.1px solid #facfcf;
+}
+.option-more:hover{
+    display: block;
+    width: max-content;
+    background-color: rgb(33, 172, 214);
+}
+.nd img
+{
+    float:left;
+    width: 350px;
+    height: 350px;
+    padding-right: 50px;
+    margin-right: 100px;
+}
+footer{
+            background-color: black;
+            height: 30px;
+            text-align: center;
+            color: antiquewhite;
+            clear: both;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="./1.png">
+        </header>
+        <div class="nav">
+            <div class="option">Trang Chủ</div>
+            <div class="option">Truyện Blog</div>
+            <div class="option">Truyện Ngắn
+            <div class="more">
+                <div class="option-more">Truyện ngắn về tình yêu</div>
+                <div class="option-more">Truyện ngắn về gia đình</div>
+                <div class="option-more">Truyện ngắn về bạn bè</div>
+                <div class="option-more">Truyện ngắn về đời sống</div>
+           </div>
+           </div>
+            <div class="option">Sách hay</div>
+            <div class="option">Tâm sự</div>
+            <div class="option">Tiểu Thuyết</div>
+            <div class="option">Tin Tức</div>
+            <div class="option">Truyện cười</div>
+            <div class="option">Liên Hệ</div>
+        </div>
+        <div class="content">
+            <ul class="section">
+                <li>Truyện nổi bật</li>
+                <li>Truyện mới</li>
+                <li>Truyện tiểu thuyết</li>
+                <li>Truyện kiếm hiệp mới</li>
+                <li>Truyện khoa học viễn tưởng</li>
+                <li>Truyện trinh thám</li>
+                <li>Góc cười</li>
+                <li>Góc tâm sự</li>
+            </ul>
+            <div class="nd">
+                <img src="https://timcachkiemtien.com/wp-content/uploads/2018/10/toi-thay-hoa-vang-tren-co-xanh-3-678x381.jpg">
+                <p>Truyện kể về giai đoạn đời người ai cũng từng trải qua nhưng đôi khi trong cuộc bề bộn với cơm áo gạo tiền và những nỗi lo không đặt hết tên, chúng ta ít nhiều</p>
+            </div>
+        </div>
+        <footer>
+            <p>
+                Bản quyền CNTT_HaUI.com
+            </p>
+        </footer>
+    </body>
+</html>

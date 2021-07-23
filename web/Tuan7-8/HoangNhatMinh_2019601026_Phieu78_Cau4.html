@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="utf-8">
+<style>
+    body{
+        width: 500px;
+        border: 1px solid #1051BF;
+        margin: 3px auto;
+        text-align: center;
+    }
+</style>
+<script>
+    function mycheck()
+    {
+        var frm = document.forms["dangky"];
+        var username = frm["username"].value;
+        var password = frm["password"].value;
+        if(username == "" && password == "")
+        {
+            alert("Không được để trống");
+            return false;
+        }
+        else{
+            if(username=="admin"&&password=="123456a@")
+            {
+                alert("Đăng nhập thành công");
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+<form name="dangky" method="POST" align="center" onsubmit="return mycheck();">
+<br>
+<H1><b>Login Information</b></H1>
+<hr><br>
+Username:<input type="text" id="username"><br><br><br>
+Password :<input type="text" id="password"><br><br>
+<input type="Submit"  value="Submit">
+<input type="reset"   value="Reset">
+</form>
+</body>
+</html>
